@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/logo_gmail.png" type="image/x-icon">
+    <title>Gmail Clone</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="header-left">
+            <span title="Main menu" class="material-symbols-outlined" onclick="toggleSidebar()">menu</span>
+            <img title="Gmail" src="./images/logo_gmail.png" alt="logo">
+        </div>
+
+        <div class="header-middle">
+            <span title="search" class="material-symbols-outlined">search</span>
+            <input type="text" placeholder="Search mail">
+            <span title="Show search options" class="material-symbols-outlined">tune</span>
+        </div>
+
+        <div class="header-right">
+            <span title="Support" class="material-symbols-outlined">help</span>
+            <span title="Settings" class="material-symbols-outlined">settings</span>
+            <span title="Google apps" class="material-symbols-outlined">apps</span>
+            <img src="./images/equipping.png" alt="" width="50px">
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    <!-- mainbody begins -->
+    <div class="main-body">
+        <!-- sidebar begins -->
+        <div class="sidebar">
+            <button class="sidebar-compose">
+                <span class="material-symbols-outlined">edit</span>
+                Compose
+            </button>
+
+            <div class="sidebarOption sidebarOption-active">
+                <span class="material-symbols-outlined">inbox</span>
+                <h3>Inbox</h3>
+            </div>
+
+            <div class="sidebarOption">
+                <span class="material-symbols-outlined">star</span>
+                <h3>Starred</h3>
+            </div>
+
+            <div class="sidebarOption">
+                <span class="material-symbols-outlined">schedule</span>
+                <h3>Snoozed</h3>
+            </div>
+
+            <div class="sidebarOption">
+                <span class="material-symbols-outlined">send</span>
+                <h3>Sent</h3>
+            </div>
+
+            <div class="sidebarOption">
+                <span class="material-symbols-outlined">draft</span>
+                <h3>Drafts</h3>
+            </div>
+
+            <div class="sidebarOption">
+                <span class="material-symbols-outlined">expand_more</span>
+                <h3>More</h3>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-footerIcons">
+                    <h3>Labels</h3>
+                    <span title="create new label" class="material-symbols-outlined">add</span>
+                </div>
+            </div>
+        </div>
+        <!-- sidebar ends -->
+
+        <!-- mail start -->
+        <div class="emailList">
+            <!-- settings start -->
+            <div class="emailList-settings">
+                <div id="dropdown" class="emailList-setttingsLeft">
+                    <!-- <input type="checkbox" /> -->
+                    <span title="select" class="material-symbols-outlined">check_box_outline_blank</span>
+                    <span id="dropdown-icon" class="material-symbols-outlined" onclick="toggleDropdown()" >arrow_drop_down</span>
+                    <div class="dropdown-content" id="myDropdown">
+                        <a href="#">All</a>
+                        <a href="#">None</a>
+                        <a href="#">Read</a>
+                        <a href="#">Unread</a>
+                        <a href="#">Starred</a>
+                        <a href="#">Unstarred</a>
+                    </div>
+                    <span title="refresh" class="material-symbols-outlined">refresh</span>
+                    <span title="more" class="material-symbols-outlined">more_vert</span>
+                </div>
+
+                <div id="dropdown2" class="emailList-setttingsRight">
+                    <span id="dropicon" class="material" onclick="toggleMyDropdown()">1-50 of 1,136</span>
+                    <div class="dropcontent" id="myDrop">
+                        <a href="#">Newest</a>
+                        <a href="#">Oldest</a>
+                    </div>
+                    <span title="oldest" id="left" class="material-symbols-outlined">chevron_left</span>
+                    <span title="newest" class="material-symbols-outlined">chevron_right</span>
+                    <span title="select-input-tool" class="material-symbols-outlined">keyboard_hide</span>
+                </div>
+            </div>
+            <!-- settigs end -->
+
+            <!-- section starts -->
+
+            <div class="emailList-sections">
+                <div class="section section-selected">
+                    <span class="material-symbols-outlined ">inbox</span>
+                    <h4>Primary</h4>
+                </div>
+
+                <div class="section ">
+                    <span id="cast" class="material-symbols-outlined">sell</span>
+                    <h4>Promotions</h4>
+                </div>
+
+                <div class="section ">
+                    <span id="cast" class="material-symbols-outlined">group</span>
+                    <h4>Socials</h4>
+                </div>
+            </div>
+            <!-- section ends -->
+
+            <!-- email list start -->
+            <div class="emailList-list">
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+
+                <!-- email row start -->
+                <div class="emailRow">
+                    <div class="emailRow-options">
+                        <input type="checkbox">
+                        <span class="material-symbols-outlined">star</span>
+                        <span  class="material-symbols-outlined" >label_important</span>
+                    </div>
+                    <h3 class="emailRow-title">GitHub</h3>
+
+                    <div class="emailRow-message">
+                        <h4>[GitHub] Please verify your device 
+                            <span class="emailRow-description"> - because we did not recognize your device.To complete the sign in, enter the verification code on the unrecognized device.</span>
+                        </h4>
+                    </div>
+
+                    <p class="emailRow-time">10:30pm</p>
+                </div>
+                <!-- email row end -->
+            </div>
+            <!-- email list ends -->
+        </div>
+        <!-- mail end -->
+    </div>
+    <!-- mainbody ends -->
+
+    <script src="./main.js"></script>
+</body>
+</html>
